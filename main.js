@@ -120,24 +120,24 @@ async function fetchLeaderboard() {
       if (row.flags.large_deposit) {
         const el = document.createElement("span");
         el.className = "flag-icon flag-deposit";
-        el.textContent = "D";
-        el.title = "Суммарные депозиты на Polymarket > 110 USDC.e";
+        el.textContent = "H";
+        el.title = "Суммарный депозит более 100$";
         flagsTd.appendChild(el);
       }
 
       if (row.flags.has_withdrawals) {
         const el = document.createElement("span");
         el.className = "flag-icon flag-withdraw";
-        el.textContent = "W";
-        el.title = "Есть выводы средств с кошелька";
+        el.textContent = "L";
+        el.title = "Низкий стартовый баланс";
         flagsTd.appendChild(el);
       }
 
       if (row.flags.non_fresh) {
         const el = document.createElement("span");
         el.className = "flag-icon flag-nonfresh";
-        el.textContent = "F";
-        el.title = "Не-фреш кошелёк: > 5 транзакций пополнения/вывода";
+        el.textContent = "O";
+        el.title = "Старый кошелек";
         flagsTd.appendChild(el);
       }
 
