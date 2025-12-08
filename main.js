@@ -1,19 +1,54 @@
 async function fetchLeaderboard() {
   const statusEl = document.getElementById("updateStatus");
   const tableBody = document.querySelector("#leaderboardTable tbody");
-  statusEl.textContent = "Loading...";
+
+  if (!window.BACKEND_BASE_URL) {
+    console.error("BACKEND_BASE_URL is not defined");
+    if (statusEl) statusEl.textContent = "BACKEND_BASE_URL is not defined";
+    return;
+  }
+
+  const url = `${window.BACKEND_BASE_URL}/leaderboard`;
+  console.log("Fetching leaderboard from:", url);
+
+  if (statusEl) statusEl.textContent = "Loading...";
 
   try {
-    const res = await fetch(`${BACKEND_BASE_URL}/leaderboard`);
+    const res = await fetch(url);
+
+    console.log("Response status:", res.status, res.statusText);
+
     if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+      throw new Error(`HTTP ${res.status} ${res.statusText}`);
     }
-    const data = await res.json();
+
+    const contentType = res.headers.get("content-type") || "";
+    const text = await res.text();
+
+    if (!contentType.includes("application/json")) {
+      console.error("Unexpected content-type:", contentType);
+      console.error("Response starts with:", text.slice(0, 200));
+      throw new Error("Backend returned non-JSON response");
+    }
+
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      console.error("JSON parse error:", e);
+      console.error("Raw text:", text.slice(0, 200));
+      throw new Error("Failed to parse JSON from backend");
+    }
+
+    if (!Array.isArray(data)) {
+      console.error("Unexpected data format:", data);
+      throw new Error("Backend returned non-array JSON");
+    }
 
     tableBody.innerHTML = "";
 
-    if (!Array.isArray(data) || data.length === 0) {
-      statusEl.textContent = "No participants yet";
+    if (data.length === 0) {
+      if (statusEl) statusEl.textContent = "No participants yet";
       return;
     }
 
@@ -95,14 +130,15 @@ async function fetchLeaderboard() {
     });
 
     const now = new Date();
-    statusEl.textContent = `Updated at ${now.toLocaleTimeString()}`;
+    if (statusEl) statusEl.textContent = `Updated at ${now.toLocaleTimeString()}`;
   } catch (e) {
-    console.error(e);
-    statusEl.textContent = "Error loading leaderboard";
+    console.error("fetchLeaderboard error:", e);
+    if (statusEl) statusEl.textContent = "Error loading leaderboard";
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("main.js loaded, BACKEND_BASE_URL =", window.BACKEND_BASE_URL);
   fetchLeaderboard();
   setInterval(fetchLeaderboard, 60000);
 });
