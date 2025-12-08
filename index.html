@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Polymarket Trading Tournament</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="page">
@@ -12,12 +12,12 @@
       <div class="header-top">
         <h1 class="title">Polymarket Trading Tournament</h1>
         <div class="bonus-badge">
-          <span class="bonus-label">Top 5 Places bonus</span>
+          <span class="bonus-label">Top 5 Places</span>
           <span class="bonus-value">$100</span>
         </div>
       </div>
       <p class="subtitle">
-        Leaderboard обновляется на основе ончейн-данных Polymarket. Портфель = стоимость открытых позиций+баланс.
+        Leaderboard обновляется на основе ончейн-данных Polymarket. Портфель = стоимость открытых позиций + баланс.
       </p>
     </header>
 
@@ -53,7 +53,7 @@
               </tr>
             </thead>
             <tbody>
-              <!-- rows will be injected by JS -->
+              <!-- строки подставит main.js -->
             </tbody>
           </table>
         </div>
@@ -61,6 +61,7 @@
     </main>
   </div>
 
+  <!-- ВАЖНО: только базовый URL, без /leaderboard и /api -->
   <script>
     const BACKEND_BASE_URL = "https://bivalvular-joi-stagily.ngrok-free.dev";
   </script>
