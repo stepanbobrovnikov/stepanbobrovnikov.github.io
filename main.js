@@ -4,7 +4,7 @@ async function fetchLeaderboard() {
   statusEl.textContent = "Loading...";
 
   try {
-    const res = await fetch(`${BACKEND_BASE_URL}/api/leaderboard`);
+    const res = await fetch(`${BACKEND_BASE_URL}/leaderboard`);
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
     }
