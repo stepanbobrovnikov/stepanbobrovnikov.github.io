@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shtanga Leaderboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .timestamp {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid #222;
+        }
+        th {
+            background: #1a1a1a;
+            font-weight: 600;
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+        tr:hover {
+            background: #1a1a1a;
+        }
+        .rank {
+            font-weight: bold;
+            color: #888;
+            width: 40px;
+        }
+        tr:nth-child(1) .rank { color: #ffd700; }
+        tr:nth-child(2) .rank { color: #c0c0c0; }
+        tr:nth-child(3) .rank { color: #cd7f32; }
+        .nickname a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .nickname a:hover {
+            color: #4dabf7;
+            text-decoration: underline;
+        }
+        .value {
+            font-family: 'SF Mono', Monaco, monospace;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        .pnl {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-weight: 600;
+            text-align: right;
+        }
+        .positive { color: #40c057; }
+        .negative { color: #fa5252; }
+        .flag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            margin-left: 6px;
+            font-weight: 500;
+        }
+        .flag-high { background: #862e2e; color: #faa; }
+        .flag-warn { background: #7c5a00; color: #ffd; }
+        .flag-old { background: #444; color: #aaa; }
+        @media (max-width: 768px) {
+            th, td { padding: 8px 6px; font-size: 0.75rem; }
+            h1 { font-size: 1.5rem; }
+            .container { padding: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shtanga Leaderboard</h1>
+        <p class="timestamp">Updated: 2025-12-15 12:30 UTC</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Participant</th>
+                    <th style="text-align:right">Position</th>
+                    <th style="text-align:right">Balance</th>
+                    <th style="text-align:right">Portfolio</th>
+                    <th style="text-align:right">Deposited</th>
+                    <th style="text-align:right">PnL</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td class="rank">1</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xb5026bf106b5ea77f42b9211fe1f4b36cf4f3c68?via=shtanga" target="_blank">evil0x</a>
+                
+            </td>
+            <td class="value">$38.16</td>
+            <td class="value">$128.17</td>
+            <td class="value">$166.33</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$66.33</td>
+        </tr>
+        <tr>
+            <td class="rank">2</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xa1e04440d1d5333ea8501010250be5277db94e5a?via=shtanga" target="_blank">Waman</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$162.05</td>
+            <td class="value">$162.05</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$62.10</td>
+        </tr>
+        <tr>
+            <td class="rank">3</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x31f843e35e75541fe47b17884a631ca422305086?via=shtanga" target="_blank">ogopnl</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$152.67</td>
+            <td class="value">$152.67</td>
+            <td class="value">$99.80</td>
+            <td class="pnl positive">+$52.87</td>
+        </tr>
+        <tr>
+            <td class="rank">4</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x2c5a22ef5cc9e124667f0ce83d53804314916210?via=shtanga" target="_blank">UAthunderbolt</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$142.55</td>
+            <td class="value">$142.55</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$42.60</td>
+        </tr>
+        <tr>
+            <td class="rank">5</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x3c953ea2fff17d8c369cf60445bfd3fd2eec9b61?via=shtanga" target="_blank">kaberezhiani</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$135.54</td>
+            <td class="value">$135.55</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$35.55</td>
+        </tr>
+        <tr>
+            <td class="rank">6</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x5b524d64f9a30facc35372ac8766898e4514519e?via=shtanga" target="_blank">mamaroma</a>
+                
+            </td>
+            <td class="value">$59.91</td>
+            <td class="value">$62.39</td>
+            <td class="value">$122.30</td>
+            <td class="value">$100.64</td>
+            <td class="pnl positive">+$21.66</td>
+        </tr>
+        <tr>
+            <td class="rank">7</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x84f815a4440f24037df40e2e7fbdd2bc359f1d17?via=shtanga" target="_blank">roncaly</a>
+                
+            </td>
+            <td class="value">$98.36</td>
+            <td class="value">$17.50</td>
+            <td class="value">$115.86</td>
+            <td class="value">$100.24</td>
+            <td class="pnl positive">+$15.62</td>
+        </tr>
+        <tr>
+            <td class="rank">8</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x19a63f970c2071694fd66a8e7a621d74c4222832?via=shtanga" target="_blank">dikaabraz</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$114.16</td>
+            <td class="value">$114.17</td>
+            <td class="value">$100.01</td>
+            <td class="pnl positive">+$14.16</td>
+        </tr>
+        <tr>
+            <td class="rank">9</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x9d326fc990927a28494436bad8b522bea690b29d?via=shtanga" target="_blank">nikitosThewinner</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$111.55</td>
+            <td class="value">$111.55</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$11.60</td>
+        </tr>
+        <tr>
+            <td class="rank">10</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xe9a47b1db7bf321e77c11ab117e6e3920e701b4c?via=shtanga" target="_blank">Carruro</a>
+                
+            </td>
+            <td class="value">$20.00</td>
+            <td class="value">$89.80</td>
+            <td class="value">$109.80</td>
+            <td class="value">$99.80</td>
+            <td class="pnl positive">+$10.00</td>
+        </tr>
+        <tr>
+            <td class="rank">11</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x8512657fd6f6500190137dee194cf551e4a87f2c?via=shtanga" target="_blank">tuchka</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$108.51</td>
+            <td class="value">$108.51</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$8.56</td>
+        </tr>
+        <tr>
+            <td class="rank">12</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xc62f1e465f5724b4528b071ab09c0684bb044820?via=shtanga" target="_blank">paramon</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$107.24</td>
+            <td class="value">$107.25</td>
+            <td class="value">$99.23</td>
+            <td class="pnl positive">+$8.02</td>
+        </tr>
+        <tr>
+            <td class="rank">13</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x17d82d538411042c01d7e208c896d269ed1c8ba6?via=shtanga" target="_blank">VladFame1</a>
+                
+            </td>
+            <td class="value">$21.40</td>
+            <td class="value">$83.94</td>
+            <td class="value">$105.34</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$5.34</td>
+        </tr>
+        <tr>
+            <td class="rank">14</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xf794b68e97c230de47880a74611e826ae05aaba2?via=shtanga" target="_blank">JohnyR</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$105.06</td>
+            <td class="value">$105.07</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$5.12</td>
+        </tr>
+        <tr>
+            <td class="rank">15</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x4c6b433ca98a92fa4f27d16ded4fe5b63079d8f6?via=shtanga" target="_blank">denture-wings</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$105.08</td>
+            <td class="value">$105.08</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$5.08</td>
+        </tr>
+        <tr>
+            <td class="rank">16</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x006c39d11ba29325484e24d3f50639ac584e690b?via=shtanga" target="_blank">Krupsky1</a>
+                
+            </td>
+            <td class="value">$51.16</td>
+            <td class="value">$51.80</td>
+            <td class="value">$102.96</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$2.96</td>
+        </tr>
+        <tr>
+            <td class="rank">17</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x32da365aefc817fb9b3395cbf684d04ef06b45ae?via=shtanga" target="_blank">bebbi</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$102.80</td>
+            <td class="value">$102.80</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$2.80</td>
+        </tr>
+        <tr>
+            <td class="rank">18</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xf569c66cbf56630854db3127a6135d7b9772a3b6?via=shtanga" target="_blank">ShtangaCompetitionD</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$101.93</td>
+            <td class="value">$101.93</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$1.93</td>
+        </tr>
+        <tr>
+            <td class="rank">19</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x380fd85bcf3aa98e7cde1991f255fbb96ce7e6ae?via=shtanga" target="_blank">shtangamarathon</a>
+                
+            </td>
+            <td class="value">$11.24</td>
+            <td class="value">$91.00</td>
+            <td class="value">$102.24</td>
+            <td class="value">$101.00</td>
+            <td class="pnl positive">+$1.24</td>
+        </tr>
+        <tr>
+            <td class="rank">20</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x3d8e1deadc0294f6aadf116ed067770bfc7b7fe3?via=shtanga" target="_blank">razdobudko95</a>
+                
+            </td>
+            <td class="value">$74.16</td>
+            <td class="value">$27.05</td>
+            <td class="value">$101.21</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$1.21</td>
+        </tr>
+        <tr>
+            <td class="rank">21</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x2a7db1f0c69889e91240008eb857365a1299dc2f?via=shtanga" target="_blank">moonart</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$101.77</td>
+            <td class="value">$101.77</td>
+            <td class="value">$100.87</td>
+            <td class="pnl positive">+$0.90</td>
+        </tr>
+        <tr>
+            <td class="rank">22</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x70922a36fe4e3ac6b5d8be9dc145537f3273467f?via=shtanga" target="_blank">Samobot</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$100.26</td>
+            <td class="value">$100.27</td>
+            <td class="value">$99.95</td>
+            <td class="pnl positive">+$0.32</td>
+        </tr>
+        <tr>
+            <td class="rank">23</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x57189dd06511b4d934c9c7175c28c5bd930ee78f?via=shtanga" target="_blank">iha</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$100.02</td>
+            <td class="value">$100.02</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$0.02</td>
+        </tr>
+        <tr>
+            <td class="rank">24</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xad561cf248765c1cfe9a830dc6cf45c90ee413bc?via=shtanga" target="_blank">A102lex</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$100.00</td>
+            <td class="value">$100.00</td>
+            <td class="value">$100.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">25</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xed40edcf45306aa3cd5f310bdd0a8abe17c16720?via=shtanga" target="_blank">Sun.Chess</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$100.02</td>
+            <td class="value">$100.02</td>
+            <td class="value">$100.02</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">26</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x34b22406218e17a3318bbd2883b24a93fb45364d?via=shtanga" target="_blank">ilyailty</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">27</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x1a900eb8b84c01aa974c0dfec6d24a64a982404c?via=shtanga" target="_blank">Turbina-Vin-Diselya</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">28</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x57e30210b5b3a33e8615099b7c2e1fb9e84fe610?via=shtanga" target="_blank">smouusi</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">29</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x04a906578c13cb1c1ee64ac6b5c3b5e6256873b7?via=shtanga" target="_blank">SubEvs</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">30</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x517dcd58782ce1398afd0fa9b3c4a072ef96857d?via=shtanga" target="_blank">Moningwood</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">31</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x15de97539afddcc1389f896ca0bb134af5021480?via=shtanga" target="_blank">vip-kazah</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">32</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xdbc7373feb8557b27fc59991cfd3ddff801a5e03?via=shtanga" target="_blank">0x6Ad1bF6866Bb44e7884FCd9817daF2D4f79520c0-1765223853592</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">33</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x54ba2b648580371ad09e84263b77fef58b07a281?via=shtanga" target="_blank">Mdmem</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$100.80</td>
+            <td class="value">$100.80</td>
+            <td class="value">$100.80</td>
+            <td class="pnl positive">+$0.00</td>
+        </tr>
+        <tr>
+            <td class="rank">34</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xb8e884f1a17fe748703d679fc136270ef34cb435?via=shtanga" target="_blank">cymbidium</a>
+                
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$95.29</td>
+            <td class="value">$95.30</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-4.65</td>
+        </tr>
+        <tr>
+            <td class="rank">35</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x8cbf1fbcfcb1aff05826d0bf46d03e834b4233df?via=shtanga" target="_blank">statisticnba</a>
+                
+            </td>
+            <td class="value">$29.70</td>
+            <td class="value">$62.86</td>
+            <td class="value">$92.56</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-7.39</td>
+        </tr>
+        <tr>
+            <td class="rank">36</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x23f6ab8a8c850d28367452b7b54b4c914793f092?via=shtanga" target="_blank">sellwro</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$102.44</td>
+            <td class="value">$102.44</td>
+            <td class="value">$109.94</td>
+            <td class="pnl negative">$-7.50</td>
+        </tr>
+        <tr>
+            <td class="rank">37</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x41c375a3f58a7bfb1538faf01d4a9802d5a88659?via=shtanga" target="_blank">goodman67</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$17.30</td>
+            <td class="value">$79.51</td>
+            <td class="value">$96.81</td>
+            <td class="value">$109.13</td>
+            <td class="pnl negative">$-12.32</td>
+        </tr>
+        <tr>
+            <td class="rank">38</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x345c768fc6baab144fd887b8187ecf6bec41cb97?via=shtanga" target="_blank">sergyn</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$137.43</td>
+            <td class="value">$0.00</td>
+            <td class="value">$137.43</td>
+            <td class="value">$152.63</td>
+            <td class="pnl negative">$-15.20</td>
+        </tr>
+        <tr>
+            <td class="rank">39</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xb17610d8ee16a48750d1f6048a5e0f52bc78567c?via=shtanga" target="_blank">wyckoff</a>
+                
+            </td>
+            <td class="value">$35.00</td>
+            <td class="value">$45.55</td>
+            <td class="value">$80.55</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-19.40</td>
+        </tr>
+        <tr>
+            <td class="rank">40</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x907ba86200f4d5c4ef0bcbbf4cfe22fd0ae2f065?via=shtanga" target="_blank">godza</a>
+                
+            </td>
+            <td class="value">$25.79</td>
+            <td class="value">$51.50</td>
+            <td class="value">$77.29</td>
+            <td class="value">$100.00</td>
+            <td class="pnl negative">$-22.71</td>
+        </tr>
+        <tr>
+            <td class="rank">41</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xa1867198f82cf7919b48247faee8dce674b7a72b?via=shtanga" target="_blank">FrayedRat</a>
+                
+            </td>
+            <td class="value">$15.07</td>
+            <td class="value">$61.97</td>
+            <td class="value">$77.04</td>
+            <td class="value">$100.40</td>
+            <td class="pnl negative">$-23.36</td>
+        </tr>
+        <tr>
+            <td class="rank">42</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xd3e003c45a49d158445d45140fc6c32011c91a7c?via=shtanga" target="_blank">kudnever1</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$75.00</td>
+            <td class="value">$75.00</td>
+            <td class="value">$100.00</td>
+            <td class="pnl negative">$-25.00</td>
+        </tr>
+        <tr>
+            <td class="rank">43</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xa4ca5f54e25f14b92050c6e891c0ded1866c73c6?via=shtanga" target="_blank">idkfa123</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$59.87</td>
+            <td class="value">$30.14</td>
+            <td class="value">$90.01</td>
+            <td class="value">$118.92</td>
+            <td class="pnl negative">$-28.91</td>
+        </tr>
+        <tr>
+            <td class="rank">44</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xc5b2beb04d213fb3a5f46d3649fe72b8983fbd13?via=shtanga" target="_blank">LamaDrama</a>
+                <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$15.44</td>
+            <td class="value">$56.90</td>
+            <td class="value">$72.34</td>
+            <td class="value">$103.98</td>
+            <td class="pnl negative">$-31.64</td>
+        </tr>
+        <tr>
+            <td class="rank">45</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xff3652df865fc2747eaec48505d794e1e7e33698?via=shtanga" target="_blank">Co1ns</a>
+                
+            </td>
+            <td class="value">$62.26</td>
+            <td class="value">$4.44</td>
+            <td class="value">$66.70</td>
+            <td class="value">$103.95</td>
+            <td class="pnl negative">$-37.25</td>
+        </tr>
+        <tr>
+            <td class="rank">46</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x1c0701971600054aeeb58817d242c823bf701197?via=shtanga" target="_blank">kawabanga0x</a>
+                <span class="flag flag-high">High Dep</span> <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$71.64</td>
+            <td class="value">$71.64</td>
+            <td class="value">$120.00</td>
+            <td class="pnl negative">$-48.36</td>
+        </tr>
+        <tr>
+            <td class="rank">47</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x9019026fa9329a34b774824de34f76c075027535?via=shtanga" target="_blank">Y0bushkiVorobushki</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$6.66</td>
+            <td class="value">$73.15</td>
+            <td class="value">$79.81</td>
+            <td class="value">$130.09</td>
+            <td class="pnl negative">$-50.28</td>
+        </tr>
+        <tr>
+            <td class="rank">48</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x74c484eab743c2a7778f71cda007826c0fcaa983?via=shtanga" target="_blank">0xchoise</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$96.02</td>
+            <td class="value">$96.02</td>
+            <td class="value">$154.08</td>
+            <td class="pnl negative">$-58.06</td>
+        </tr>
+        <tr>
+            <td class="rank">49</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x72703ef8199e59028170abd35f0a3d2b83c48dd5?via=shtanga" target="_blank">Demion</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$109.69</td>
+            <td class="value">$0.00</td>
+            <td class="value">$109.69</td>
+            <td class="value">$168.36</td>
+            <td class="pnl negative">$-58.67</td>
+        </tr>
+        <tr>
+            <td class="rank">50</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x919d0890e4f5d542fb643d449e79b65a54c4623f?via=shtanga" target="_blank">stiven-syeta</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$26.71</td>
+            <td class="value">$26.71</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-73.24</td>
+        </tr>
+        <tr>
+            <td class="rank">51</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xaf2843d233372a305b5e65568c3f05a61f2e6849?via=shtanga" target="_blank">Karl111</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$175.47</td>
+            <td class="value">$175.47</td>
+            <td class="value">$249.95</td>
+            <td class="pnl negative">$-74.48</td>
+        </tr>
+        <tr>
+            <td class="rank">52</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x56740f94ce5f35802ab685fdb9ff6dcd17f9a026?via=shtanga" target="_blank">Anon</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$77.24</td>
+            <td class="value">$77.25</td>
+            <td class="value">$153.00</td>
+            <td class="pnl negative">$-75.75</td>
+        </tr>
+        <tr>
+            <td class="rank">53</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x65b34d23872e81ccac74e532f1f1de464fffeb45?via=shtanga" target="_blank">yrixshtanga</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.02</td>
+            <td class="value">$121.94</td>
+            <td class="value">$121.96</td>
+            <td class="value">$208.30</td>
+            <td class="pnl negative">$-86.34</td>
+        </tr>
+        <tr>
+            <td class="rank">54</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xdff1e3ca1aa36dc1ec4ed92e01720a9862154cc3?via=shtanga" target="_blank">shtanga123</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$5.89</td>
+            <td class="value">$5.89</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-94.06</td>
+        </tr>
+        <tr>
+            <td class="rank">55</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xa5f6f4edd21e678a5aba6238d1119ba45a951c41?via=shtanga" target="_blank">mcshpak</a>
+                <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$0.01</td>
+            <td class="value">$4.95</td>
+            <td class="value">$4.96</td>
+            <td class="value">$103.00</td>
+            <td class="pnl negative">$-98.04</td>
+        </tr>
+        <tr>
+            <td class="rank">56</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x52c418b3eba5661f68064bc7a83dd7c0118da3a0?via=shtanga" target="_blank">Bayuna</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.21</td>
+            <td class="value">$0.21</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-99.74</td>
+        </tr>
+        <tr>
+            <td class="rank">57</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x0dd90742127eaf416c60afa3a3cf8f71c4ae4c3c?via=shtanga" target="_blank">volumerain</a>
+                
+            </td>
+            <td class="value">$0.05</td>
+            <td class="value">$0.01</td>
+            <td class="value">$0.06</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-99.89</td>
+        </tr>
+        <tr>
+            <td class="rank">58</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x9be4bd6b9c530597ca873ffac8cddb7edefc5843?via=shtanga" target="_blank">IIITANGA</a>
+                
+            </td>
+            <td class="value">$0.02</td>
+            <td class="value">$0.01</td>
+            <td class="value">$0.03</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-99.92</td>
+        </tr>
+        <tr>
+            <td class="rank">59</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xa2ed034d2cde7f61ed9e4173c4991341628a26f9?via=shtanga" target="_blank">Ludikdelta</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.01</td>
+            <td class="value">$0.01</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-99.94</td>
+        </tr>
+        <tr>
+            <td class="rank">60</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x4b63e5fce84173d00f5aec922a2ceb8a930ed7a6?via=shtanga" target="_blank">fdgfhgfd2</a>
+                <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.00</td>
+            <td class="value">$99.95</td>
+            <td class="pnl negative">$-99.95</td>
+        </tr>
+        <tr>
+            <td class="rank">61</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x2980c5f749e887cec5122cfacdf9d68996f78943?via=shtanga" target="_blank">competitor</a>
+                
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.01</td>
+            <td class="value">$0.01</td>
+            <td class="value">$100.00</td>
+            <td class="pnl negative">$-99.99</td>
+        </tr>
+        <tr>
+            <td class="rank">62</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x7309f724b2472c3cd5ad90df62904caa29fee1e8?via=shtanga" target="_blank">rrrrgggr</a>
+                
+            </td>
+            <td class="value">$0.03</td>
+            <td class="value">$0.64</td>
+            <td class="value">$0.67</td>
+            <td class="value">$104.79</td>
+            <td class="pnl negative">$-104.12</td>
+        </tr>
+        <tr>
+            <td class="rank">63</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x07e9130b58e587803a664dd6a08d3bfcee330ec6?via=shtanga" target="_blank">1olegator</a>
+                <span class="flag flag-high">High Dep</span> <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$31.40</td>
+            <td class="value">$72.29</td>
+            <td class="value">$103.69</td>
+            <td class="value">$218.76</td>
+            <td class="pnl negative">$-115.07</td>
+        </tr>
+        <tr>
+            <td class="rank">64</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xf101818502273cd867e6452cc2f22e0ac8dfb906?via=shtanga" target="_blank">AdApT.</a>
+                <span class="flag flag-high">High Dep</span> <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$3.78</td>
+            <td class="value">$54.50</td>
+            <td class="value">$58.28</td>
+            <td class="value">$199.95</td>
+            <td class="pnl negative">$-141.67</td>
+        </tr>
+        <tr>
+            <td class="rank">65</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xd92913f6c538d583be38430a4082f035d4f13e23?via=shtanga" target="_blank">obnulenie</a>
+                <span class="flag flag-high">High Dep</span> <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$0.03</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.03</td>
+            <td class="value">$153.80</td>
+            <td class="pnl negative">$-153.77</td>
+        </tr>
+        <tr>
+            <td class="rank">66</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x2ed83f1610594b6a54e738f0180280375449ff69?via=shtanga" target="_blank">shtanga.ne.sliv</a>
+                <span class="flag flag-high">High Dep</span> <span class="flag flag-warn">Withdrawals</span>
+            </td>
+            <td class="value">$0.03</td>
+            <td class="value">$0.00</td>
+            <td class="value">$0.03</td>
+            <td class="value">$218.72</td>
+            <td class="pnl negative">$-218.69</td>
+        </tr>
+        <tr>
+            <td class="rank">67</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0xf104968845b6c182bbd090e9b512c730d5db31ef?via=shtanga" target="_blank">bonders</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$0.00</td>
+            <td class="value">$112.45</td>
+            <td class="value">$112.45</td>
+            <td class="value">$428.08</td>
+            <td class="pnl negative">$-315.63</td>
+        </tr>
+        <tr>
+            <td class="rank">68</td>
+            <td class="nickname">
+                <a href="https://polymarket.com/profile/0x663b724ba6c5ab47dab9e51c91fb226331587d05?via=shtanga" target="_blank">byrock</a>
+                <span class="flag flag-high">High Dep</span>
+            </td>
+            <td class="value">$13.81</td>
+            <td class="value">$26.13</td>
+            <td class="value">$39.94</td>
+            <td class="value">$361.47</td>
+            <td class="pnl negative">$-321.53</td>
+        </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
